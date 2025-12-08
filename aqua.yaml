@@ -1,0 +1,5 @@
+registries:
+  - type: standard
+    ref: e5498754116ecfdc4d87deefa92ca6ed24673265
+packages:
+  - name: wixtoolset/wix@v6.0.2

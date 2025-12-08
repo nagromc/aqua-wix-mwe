@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+
+  <groupId>aqua_wix.mwe</groupId>
+  <artifactId>aqua_wix.mwe</artifactId>
+  <version>0.0.1</version>
+
+  <properties>
+    <maven.compiler.release>25</maven.compiler.release>
+  </properties>
+
+  <build>
+    <plugins>
+      <plugin>
+        <groupId>org.panteleyev</groupId>
+        <artifactId>jpackage-maven-plugin</artifactId>
+        <executions>
+          <execution>
+            <phase>package</phase>
+            <goals>
+              <goal>jpackage</goal>
+            </goals>
+          </execution>
+        </executions>
+        <configuration>
+          <name>MyApp</name>
+          <appVersion>0.0.1</appVersion>
+          <vendor>ACME</vendor>
+          <input>${project.build.directory}</input>
+          <mainJar>aqua_wix.mwe-0.0.1.jar</mainJar>
+          <mainClass>aqua_wix.mwe.MyApp</mainClass>
+          <destination>${project.build.directory}</destination>
+        </configuration>
+      </plugin>
+    </plugins>
+  </build>
+</project>
