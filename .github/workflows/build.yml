@@ -5,6 +5,9 @@ jobs:
   scoop:
     runs-on: windows-latest
     steps:
+    - name: Remove pre-installed WiX Toolset
+      run: choco uninstall --yes wixtoolset
+
     - name: Checkout repository
       uses: actions/checkout@v6
 
@@ -43,6 +46,9 @@ jobs:
   aqua:
     runs-on: windows-latest
     steps:
+      - name: Remove pre-installed WiX Toolset
+        run: choco uninstall --yes wixtoolset
+
       - name: Checkout repository
         uses: actions/checkout@v6
 
