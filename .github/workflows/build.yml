@@ -18,6 +18,7 @@ jobs:
       run: |
         wix extension add -g WixToolset.Util.wixext/6.0.2
         wix extension add -g WixToolset.Ui.wixext/6.0.2
+        wix extension list -g
 
     - name: Setup Java
       uses: actions/setup-java@v5
@@ -43,6 +44,7 @@ jobs:
         run: |
           wix extension add -g WixToolset.Util.wixext/6.0.2
           wix extension add -g WixToolset.Ui.wixext/6.0.2
+          wix extension list -g
 
       - name: Setup Java
         uses: actions/setup-java@v5
