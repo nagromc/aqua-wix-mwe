@@ -68,6 +68,7 @@ jobs:
       - name: Show env
         shell: pwsh
         run: |
+          echo "env var AQUA_LOG_LEVEL:   $env:AQUA_LOG_LEVEL"
           echo "where.exe aqua:   $(where.exe aqua)"
           echo "aqua --version:   $(aqua --version)"
           echo "where.exe wix:   $(where.exe wix)"
