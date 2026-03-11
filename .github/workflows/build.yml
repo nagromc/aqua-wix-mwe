@@ -45,16 +45,14 @@ jobs:
 
   aqua:
     runs-on: windows-latest
+    env:
+      AQUA_LOG_LEVEL: debug
     steps:
       - name: Remove pre-installed WiX Toolset
         run: choco uninstall --yes wixtoolset
 
       - name: Checkout repository
         uses: actions/checkout@v6
-
-      - name: Set env vars
-        run: |
-          echo "AQUA_LOG_LEVEL=debug" >> "$GITHUB_ENV"
 
       - uses: aquaproj/aqua-installer@11dd79b4e498d471a9385aa9fb7f62bb5f52a73c # v4.0.4
         with:
