@@ -1,0 +1,21 @@
+name: run
+on: push
+
+jobs:
+  scoop:
+    runs-on: windows-latest
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v2
+
+    - name: Setup Scoop
+      uses: MinoruSekine/setup-scoop@v4.0.2
+      with:
+        buckets: java
+        apps: temurin-lts-jdk wixtoolset@6.0.2
+
+    - name: Install Wix dependencies
+      shell: pwsh
+      run: |
+        wix extension add -g WixToolset.Util.wixext/6.0.2
+        wix extension add -g WixToolset.Ui.wixext/6.0.2
