@@ -7,6 +7,7 @@
 2. Install Java and WiX using Scoop:
 
     ```shell
+    scoop bucket add java
     scoop install temurin-lts-jdk wixtoolset@6.0.2
     ```
 
