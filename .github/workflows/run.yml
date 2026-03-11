@@ -11,8 +11,7 @@ jobs:
     - name: Setup Scoop
       uses: MinoruSekine/setup-scoop@v4
       with:
-        buckets: java
-        apps: temurin-lts-jdk wixtoolset@6.0.2
+        apps: wixtoolset@6.0.2
 
     - name: Install Wix dependencies
       shell: pwsh
