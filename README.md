@@ -7,14 +7,14 @@
 2. Install Java and WiX using Scoop:
 
     ```shell
-    scoop install temurin-lts-jdk wixtoolset
+    scoop install temurin-lts-jdk wixtoolset@6.0.2
     ```
 
 3. Install the WiX extensions:
 
     ```shell
-    wix extension add -g WixToolset.Util.wixext
-    wix extension add -g WixToolset.Ui.wixext
+    wix extension add -g WixToolset.Util.wixext/6.0.2
+    wix extension add -g WixToolset.Ui.wixext/6.0.2
     ```
 
 
@@ -26,7 +26,7 @@
 1. Make sure WiX is already install using Scoop:
 
     ```shell
-    scoop install wixtoolset
+    scoop install wixtoolset@6.0.2
     ```
 
 2. Run `mvn clean package`
