@@ -80,10 +80,6 @@ jobs:
           echo "where.exe wix:   $(where.exe wix)"
           echo "wix --version:   $(wix --version)"
           echo "wix extension list -g:   $(wix extension list -g)"
-          echo "where.exe candle:   $(where.exe candle)"
-          echo "candle -help:   $(candle -help)"
-          echo "where.exe light:   $(where.exe light)"
-          echo "light -help:   $(light -help)"
           echo "where.exe java:   $(where.exe java)"
           echo "java -version:   $(java -version)"
 
