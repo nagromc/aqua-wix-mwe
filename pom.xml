@@ -34,6 +34,7 @@
           <mainJar>aqua_wix.mwe-0.0.1.jar</mainJar>
           <mainClass>aqua_wix.mwe.MyApp</mainClass>
           <destination>${project.build.directory}</destination>
+          <verbose>true</verbose>
         </configuration>
       </plugin>
     </plugins>
