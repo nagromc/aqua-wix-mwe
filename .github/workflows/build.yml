@@ -85,4 +85,7 @@ jobs:
           echo "java -version:   $(java -version)"
 
       - name: Build
-        run: ./mvnw clean package --debug --errors
+        run: |
+          echo "where.exe wix:   $(where.exe wix)"
+          echo "wix --version:   $(wix --version)"
+          ./mvnw clean package --debug --errors
