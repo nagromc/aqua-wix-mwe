@@ -15,26 +15,36 @@
   <build>
     <plugins>
       <plugin>
-        <groupId>org.panteleyev</groupId>
-        <artifactId>jpackage-maven-plugin</artifactId>
-        <version>1.7.4</version>
+        <groupId>org.codehaus.mojo</groupId>
+        <artifactId>exec-maven-plugin</artifactId>
+        <version>3.6.3</version>
         <executions>
           <execution>
             <phase>package</phase>
             <goals>
-              <goal>jpackage</goal>
+              <goal>exec</goal>
             </goals>
           </execution>
         </executions>
         <configuration>
-          <name>MyApp</name>
-          <appVersion>0.0.1</appVersion>
-          <vendor>ACME</vendor>
-          <input>${project.build.directory}</input>
-          <mainJar>aqua_wix.mwe-0.0.1.jar</mainJar>
-          <mainClass>aqua_wix.mwe.MyApp</mainClass>
-          <destination>${project.build.directory}</destination>
-          <verbose>true</verbose>
+          <executable>jpackage</executable>
+          <arguments>
+            <argument>--name</argument>
+            <argument>MyApp</argument>
+            <argument>--dest</argument>
+            <argument>target</argument>
+            <argument>--verbose</argument>
+            <argument>--app-version</argument>
+            <argument>0.0.1</argument>
+            <argument>--input</argument>
+            <argument>target</argument>
+            <argument>--vendor</argument>
+            <argument>ACME</argument>
+            <argument>--main-class</argument>
+            <argument>aqua_wix.mwe.MyApp</argument>
+            <argument>--main-jar</argument>
+            <argument>aqua_wix.mwe-0.0.1.jar</argument>
+          </arguments>
         </configuration>
       </plugin>
     </plugins>
