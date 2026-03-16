@@ -65,6 +65,11 @@ jobs:
           wix extension add -g WixToolset.Ui.wixext/6.0.2
           wix extension list -g
 
+      - name: Force aqua WiX full install
+        shell: pwsh
+        run: |
+          aqua exec -- wix --version
+
       - name: Setup Java
         uses: actions/setup-java@v5
         with:
