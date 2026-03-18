@@ -14,39 +14,39 @@
 
   <build>
     <plugins>
-      <plugin>
-        <groupId>org.codehaus.mojo</groupId>
-        <artifactId>exec-maven-plugin</artifactId>
-        <version>3.6.3</version>
-        <executions>
-          <execution>
-            <phase>package</phase>
-            <goals>
-              <goal>exec</goal>
-            </goals>
-          </execution>
-        </executions>
-        <configuration>
-          <executable>jpackage</executable>
-          <arguments>
-            <argument>--name</argument>
-            <argument>MyApp</argument>
-            <argument>--dest</argument>
-            <argument>target</argument>
-            <argument>--verbose</argument>
-            <argument>--app-version</argument>
-            <argument>0.0.1</argument>
-            <argument>--input</argument>
-            <argument>target</argument>
-            <argument>--vendor</argument>
-            <argument>ACME</argument>
-            <argument>--main-class</argument>
-            <argument>aqua_wix.mwe.MyApp</argument>
-            <argument>--main-jar</argument>
-            <argument>aqua_wix.mwe-0.0.1.jar</argument>
-          </arguments>
-        </configuration>
-      </plugin>
+<!--      <plugin>-->
+<!--        <groupId>org.codehaus.mojo</groupId>-->
+<!--        <artifactId>exec-maven-plugin</artifactId>-->
+<!--        <version>3.6.3</version>-->
+<!--        <executions>-->
+<!--          <execution>-->
+<!--            <phase>package</phase>-->
+<!--            <goals>-->
+<!--              <goal>exec</goal>-->
+<!--            </goals>-->
+<!--          </execution>-->
+<!--        </executions>-->
+<!--        <configuration>-->
+<!--          <executable>jpackage</executable>-->
+<!--          <arguments>-->
+<!--            <argument>&#45;&#45;name</argument>-->
+<!--            <argument>MyApp</argument>-->
+<!--            <argument>&#45;&#45;dest</argument>-->
+<!--            <argument>target</argument>-->
+<!--            <argument>&#45;&#45;verbose</argument>-->
+<!--            <argument>&#45;&#45;app-version</argument>-->
+<!--            <argument>0.0.1</argument>-->
+<!--            <argument>&#45;&#45;input</argument>-->
+<!--            <argument>target</argument>-->
+<!--            <argument>&#45;&#45;vendor</argument>-->
+<!--            <argument>ACME</argument>-->
+<!--            <argument>&#45;&#45;main-class</argument>-->
+<!--            <argument>aqua_wix.mwe.MyApp</argument>-->
+<!--            <argument>&#45;&#45;main-jar</argument>-->
+<!--            <argument>aqua_wix.mwe-0.0.1.jar</argument>-->
+<!--          </arguments>-->
+<!--        </configuration>-->
+<!--      </plugin>-->
     </plugins>
   </build>
 </project>
