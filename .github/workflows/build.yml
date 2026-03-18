@@ -78,11 +78,17 @@ jobs:
           java-version: 25
           distribution: temurin
 
+      - name: Add aqua to path
+        shell: pwsh
+        run: |
+          echo "::core.addPath('C:\Users\runneradmin\AppData\Local\aquaproj-aqua\bin')"
+
       - name: Show env
         shell: pwsh
         run: |
           echo "env var AQUA_LOG_LEVEL:   $env:AQUA_LOG_LEVEL"
           echo "env var PATH:   $env:PATH"
+          echo "env var GITHUB_PATH:   $env:GITHUB_PATH"
           echo "where.exe aqua:   $(where.exe aqua)"
           echo "aqua --version:   $(aqua --version)"
           echo "where.exe wix:   $(where.exe wix)"
