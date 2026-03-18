@@ -44,7 +44,7 @@ jobs:
       run: mvn clean package --debug --errors
 
   aqua:
-    runs-on: windows-2019
+    runs-on: windows-2022
     env:
       AQUA_LOG_LEVEL: debug
       AQUA_DISABLE_LAZY_INSTALL: true
