@@ -81,7 +81,7 @@ jobs:
       - name: Add aqua to path
         shell: pwsh
         run: |
-          echo "::core.addPath('C:\Users\runneradmin\AppData\Local\aquaproj-aqua\bin')"
+          echo "C:\Users\runneradmin\AppData\Local\aquaproj-aqua\bin" | Out-File -FilePath "$env:GITHUB_PATH" -Append
 
       - name: Show env
         shell: pwsh
