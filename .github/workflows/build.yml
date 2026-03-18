@@ -47,6 +47,7 @@ jobs:
     runs-on: windows-latest
     env:
       AQUA_LOG_LEVEL: debug
+      AQUA_DISABLE_LAZY_INSTALL: true
     steps:
       - name: Remove pre-installed WiX Toolset
         run: choco uninstall --yes wixtoolset
