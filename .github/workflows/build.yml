@@ -99,8 +99,8 @@ jobs:
 
       - name: Build
         run: |
+          ./mvnw clean package --debug --errors
           echo "where.exe wix:   $(where.exe wix)"
           echo "wix --version:   $(wix --version)"
           echo "where.exe jpackage:   $(where.exe jpackage)"
-          ./mvnw clean package --debug --errors
           jpackage.exe --name MyApp --dest target --verbose --app-version 0.0.1 --input target --vendor ACME --main-class aqua_wix.mwe.MyApp --main-jar aqua_wix.mwe-0.0.1.jar
