@@ -76,7 +76,7 @@ jobs:
       - name: Setup Java
         uses: actions/setup-java@v5
         with:
-          java-version: 25
+          java-version: 27
           distribution: temurin
 
       - name: Add aqua to path
